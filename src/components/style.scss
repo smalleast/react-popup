@@ -1,0 +1,47 @@
+.react-popup {
+  position: fixed;
+  left: 0;
+  z-index: 2;
+  transition: transform .3s, -webkit-transform .3s;
+
+  &[data-direction=top] {
+    top: 0;
+    &[data-visible=false] {
+      transform: translateY(-100%);
+    }
+
+    &[data-visible=true] {
+      transform: translateY(0);
+    }
+  }
+  &[data-direction=right] {
+    top: 0;
+    &[data-visible=false] {
+      transform: translateX(100%);
+    }
+
+    &[data-visible=true] {
+      transform: translateX(0);
+    }
+  }
+  &[data-direction=bottom] {
+    bottom: 0;
+    &[data-visible=false] {
+      transform: translateY(100%);
+    }
+
+    &[data-visible=true] {
+      transform: translateY(0);
+    }
+  }
+  &[data-direction=left] {
+    top: 0;
+    &[data-visible=false] {
+      transform: translateX(-100%);
+    }
+
+    &[data-visible=true] {
+      transform: translateX(0);
+    }
+  }
+}
